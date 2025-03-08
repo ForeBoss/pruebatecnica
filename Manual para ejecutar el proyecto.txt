@@ -1,0 +1,49 @@
+Prueba técnica - Andrés Felipe Forero Cardoso
+
+1. Configuración de Base de Datos con PostgreSQL:
+
+CREATE DATABASE bdpruebatecnica;
+
+CREATE TABLE usuarios (
+id SERIAL PRIMARY KEY,
+nombre VARCHAR(100),
+correo VARCHAR(100),
+edad INT
+);
+
+INSERT INTO usuarios (nombre, correo, edad) VALUES
+('Miguel', 'miguel.ramirez@example.com', 23),
+('Kevin Garcia', 'kevin.garcia@example.com', 20),
+('Laura Martinez', 'laura.martinez@example.com', 27),
+('Daniela', 'daniela.perez@example.com', 29),
+('Carlos Lopez', 'carlos.lopez@example.com', 31);	
+
+SELECT * FROM usuarios;
+
+2. CRUD - Backend con Java Spring Boot
+
+spring.application.name=Crud
+# base de datos
+spring.datasource.url=jdbc:postgresql://localhost:5432/bdpruebatecnica
+spring.datasource.username=postgres
+spring.datasource.password=admin
+
+# JPA
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+
+# puerto
+server.port=8089
+
+3. GET - Backend con Express Node
+
+PORT=3000
+DB_USER=postgres
+DB_PASSWORD=admin
+DB_HOST=localhost
+DB_PORT=5432
+DB_DATABASE=bdpruebatecnica
+
+4. Front Angular
+Puerto 4200
